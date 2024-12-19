@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+    <title>Your Tasks</title>
+</head>
+<body>
+    <h1>Your Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task[1] }} (Added on {{ task[2] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Add Tasks</a>
+</body>
+</html>
